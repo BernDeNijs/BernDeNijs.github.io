@@ -10,38 +10,47 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
         }
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #1f1f1f; /* Darker header background */
+            color: #e0e0e0; /* Light text for header */
             padding: 20px 0;
             text-align: center;
         }
         section {
             margin: 40px;
         }
-        h1, h2 {
-            color: #4CAF50;
+        h1, h2, h3 {
+            color: #90caf9; /* Light blue text for headers */
         }
-        .project {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
+        p {
+            line-height: 1.6;
+        }
+        .projects-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-box {
+            background-color: #1f1f1f; /* Dark background for project box */
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .project-box:hover {
+            background-color: #333; /* Slightly lighter background on hover */
         }
         .project img {
+            width: 100%;
             max-width: 300px;
-            margin-right: 20px;
+            margin-bottom: 10px;
             border-radius: 10px;
         }
-        .project div {
-            flex-grow: 1;
-        }
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #1f1f1f; /* Dark footer */
+            color: #e0e0e0; /* Light text for footer */
             text-align: center;
             padding: 10px 0;
             position: fixed;
@@ -49,7 +58,7 @@
             width: 100%;
         }
         a {
-            color: #4CAF50;
+            color: #90caf9; /* Light blue links */
             text-decoration: none;
         }
         a:hover {
@@ -73,17 +82,56 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <img src="https://via.placeholder.com/300" alt="Patchwork Parkour Screenshot">
-            <div>
+
+        <div class="projects-section">
+
+            <!-- Patchwork Parkour -->
+            <div class="project-box">
+                <img src="https://via.placeholder.com/300" alt="Patchwork Parkour Screenshot">
                 <h3>Patchwork Parkour</h3>
                 <p>
-                    I worked on <strong>Patchwork Parkour</strong> as a lead designer and programmer. 
-                    I was responsible for creating the climbing mechanic, several of the obstacles, 
-                    and the multiplayer functionality. I was also a driving force behind the creative vision of the game. 
+                    <strong>Patchwork Parkour</strong> is a couch co-op game where you and your friends each control a separate limb of a character called "Franky". 
+                    Working together, you must navigate and climb to the top of a challenging tower filled with obstacles. 
+                    I worked as the lead designer and programmer, focusing on the climbing mechanics, obstacle design, and multiplayer functionality.
+                </p>
+                <p>
                     You can check out the game on <a href="https://kaatjeg.itch.io/group28patchworkparkour" target="_blank">itch.io</a>.
                 </p>
             </div>
+
+            <!-- Doppler -->
+            <div class="project-box">
+                <img src="https://via.placeholder.com/300" alt="Doppler Game Screenshot">
+                <h3>Doppler</h3>
+                <p>
+                    <strong>Doppler</strong> is a physics-based combat game where you wield a gun that can push or pull objects. 
+                    Use this mechanic to create mayhem in the environment and engage in creative combat. 
+                    This project was done solo as part of a course assignment, allowing me to explore unique physics-driven mechanics.
+                </p>
+            </div>
+
+            <!-- WaitASec -->
+            <div class="project-box">
+                <img src="https://via.placeholder.com/300" alt="WaitASec Game Screenshot">
+                <h3>WaitASec</h3>
+                <p>
+                    <strong>WaitASec</strong> is a time manipulation game where you can freeze time to plan a series of quick, time-based abilities to defeat your enemies. 
+                    The ability to stop time allows for strategic planning and fast execution. 
+                    I developed this game solo for a course project, experimenting with time-based gameplay mechanics.
+                </p>
+            </div>
+
+            <!-- PacmanGameEngine -->
+            <div class="project-box">
+                <img src="https://via.placeholder.com/300" alt="Pacman Game Engine Screenshot">
+                <h3>PacmanGameEngine</h3>
+                <p>
+                    <strong>PacmanGameEngine</strong> is a barebones game engine I created with a team to replicate a basic Pac-Man style game. 
+                    This project was a valuable learning experience in understanding the fundamentals of game engines, 
+                    game loops, and rendering processes.
+                </p>
+            </div>
+
         </div>
     </section>
 
