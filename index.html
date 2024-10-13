@@ -46,6 +46,7 @@
             padding: 20px;
             border-radius: 10px;
             position: relative;
+            margin-bottom: 20px; /* Consistent spacing between projects */
         }
 
         /* Title Position (Top-Left) */
@@ -70,17 +71,41 @@
             background-color: #1f1f1f;
             border-radius: 10px;
             padding: 10px;
+            display: flex; /* Allows for better content fitting */
+            flex-direction: column; /* Aligns content vertically */
+            justify-content: center; /* Centers content vertically */
         }
 
         .media-box video, .media-box img {
             width: 100%;
             max-height: 250px; /* Set a maximum height */
-            object-fit: cover; /* Ensure video/image fits nicely */
+            object-fit: contain; /* Change to contain to prevent clipping */
             border-radius: 10px;
         }
 
         .info-box h3 {
             margin-top: 0;
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #90caf9;
+            color: #121212;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Spacing above the button */
+        }
+
+        .button:hover {
+            background-color: #42a5f5; /* Darker blue on hover */
         }
 
         /* "Other Projects" Grid */
@@ -99,7 +124,7 @@
         .other-project img {
             width: 100%;
             max-height: 150px;
-            object-fit: cover;
+            object-fit: contain; /* Ensure images are contained and not clipped */
             border-radius: 10px;
             display: block;
         }
@@ -160,9 +185,7 @@
                         Working together, you must navigate and climb to the top of a challenging tower filled with obstacles.<br><br> 
                         I worked as the lead designer and programmer, focusing on the climbing mechanics, obstacle design, and multiplayer functionality.
                     </p>
-                    <p>
-                        You can check out the game on <a href="https://kaatjeg.itch.io/group28patchworkparkour" target="_blank">itch.io</a>.
-                    </p>
+                    <a href="https://kaatjeg.itch.io/group28patchworkparkour" class="button" target="_blank">Play on itch.io</a>
                 </div>
             </div>
         </div>
@@ -183,9 +206,7 @@
                         Use this mechanic to create mayhem in the environment and engage in creative combat.<br><br> 
                         This project was done solo as part of a course assignment, allowing me to explore unique physics-driven mechanics.
                     </p>
-                    <p>
-                        You can check out the game on <a href="https://bern-de-nijs.itch.io/doppler" target="_blank">itch.io</a>.
-                    </p>
+                    <a href="https://bern-de-nijs.itch.io/doppler" class="button" target="_blank">Play on itch.io</a>
                 </div>
             </div>
         </div>
@@ -204,9 +225,7 @@
                     The ability to stop time allows for strategic planning and fast execution.<br><br>
                     I developed this game solo for a course project, experimenting with time-based gameplay mechanics.
                 </p>
-                <p>
-                    You can check out the game on <a href="https://bern-de-nijs.itch.io/waitasec" target="_blank">itch.io</a>.
-                </p>
+                <a href="https://bern-de-nijs.itch.io/waitasec" class="button" target="_blank">Play on itch.io</a>
             </div>
 
             <!-- PacmanGameEngine -->
@@ -225,5 +244,3 @@
     <footer>
         <p>&copy; 2024 Bern De Nijs</p>
     </footer>
-</body>
-</html>
