@@ -39,28 +39,29 @@
             border-radius: 10px;
             transition: background-color 0.3s ease;
             display: flex;
-            flex-direction: column;
-            align-items: center; /* Center horizontally */
-            text-align: left; /* Align text to left */
-            overflow: hidden; /* Hide any overflow */
+            align-items: flex-start; /* Align items to the top */
+            gap: 20px; /* Space between image/video and text */
+            text-align: left;
         }
         .project-box:hover {
             background-color: #333; /* Slightly lighter background on hover */
         }
-        .project img {
-            width: 100%; /* Ensure image takes the full width of the container */
-            max-height: 250px; /* Set a maximum height for the image */
+        .project-media {
+            flex: 1; /* Media takes up 50% of the container */
+        }
+        .project-content {
+            flex: 1; /* Text content takes up 50% of the container */
+        }
+        .project img, .project video {
+            width: 100%; /* Ensure image or video takes the full width of the container */
+            max-height: 250px; /* Set a maximum height for the media */
             object-fit: cover; /* Ensure image covers the box without distortion */
             border-radius: 10px; /* Keep rounded corners */
-            display: block; /* Remove any inline spacing */
         }
-        /* Style the video element inside the project box */
+        /* Style the video element */
         .project video {
-            width: 60%;
-            max-width: 500px; /* Set a maximum width for the video */
-            max-height: 200px; /* Set a maximum height for the video */
-            object-fit: cover;
-            border-radius: 10px;
+            max-width: 100%; /* Allow video to be responsive within the box */
+            max-height: 200px; /* Constrain video height */
         }
         /* Style for the "Other Projects" section */
         .other-projects-section {
@@ -120,33 +121,41 @@
 
             <!-- Patchwork Parkour -->
             <div class="project-box">
-                <video controls>
-                    <source src="/videos/PatchworkParkour.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3>Patchwork Parkour</h3>
-                <p>
-                    <strong>Patchwork Parkour</strong> is a couch co-op game where you and your friends each control a separate limb of a character called "Franky". 
-                    Working together, you must navigate and climb to the top of a challenging tower filled with obstacles.<br><br> 
-                    I worked as the lead designer and programmer, focusing on the climbing mechanics, obstacle design, and multiplayer functionality.
-                </p>
-                <p>
-                    You can check out the game on <a href="https://kaatjeg.itch.io/group28patchworkparkour" target="_blank">itch.io</a>.
-                </p>
+                <div class="project-media">
+                    <video controls>
+                        <source src="/videos/PatchworkParkour.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-content">
+                    <h3>Patchwork Parkour</h3>
+                    <p>
+                        <strong>Patchwork Parkour</strong> is a couch co-op game where you and your friends each control a separate limb of a character called "Franky". 
+                        Working together, you must navigate and climb to the top of a challenging tower filled with obstacles.<br><br> 
+                        I worked as the lead designer and programmer, focusing on the climbing mechanics, obstacle design, and multiplayer functionality.
+                    </p>
+                    <p>
+                        You can check out the game on <a href="https://kaatjeg.itch.io/group28patchworkparkour" target="_blank">itch.io</a>.
+                    </p>
+                </div>
             </div>
 
             <!-- Doppler -->
             <div class="project-box">
-                <img src="/images/doppler-screenshot.png" alt="Doppler Game Screenshot">
-                <h3>Doppler</h3>
-                <p>
-                    <strong>Doppler</strong> is a physics-based combat game where you wield a gun that can push or pull objects. 
-                    Use this mechanic to create mayhem in the environment and engage in creative combat.<br><br> 
-                    This project was done solo as part of a course assignment, allowing me to explore unique physics-driven mechanics.
-                </p>
-				<p>
-                    You can check out the game on <a href="https://bern-de-nijs.itch.io/doppler" target="_blank">itch.io</a>.
-                </p>
+                <div class="project-media">
+                    <img src="/images/doppler-screenshot.png" alt="Doppler Game Screenshot">
+                </div>
+                <div class="project-content">
+                    <h3>Doppler</h3>
+                    <p>
+                        <strong>Doppler</strong> is a physics-based combat game where you wield a gun that can push or pull objects. 
+                        Use this mechanic to create mayhem in the environment and engage in creative combat.<br><br> 
+                        This project was done solo as part of a course assignment, allowing me to explore unique physics-driven mechanics.
+                    </p>
+                    <p>
+                        You can check out the game on <a href="https://bern-de-nijs.itch.io/doppler" target="_blank">itch.io</a>.
+                    </p>
+                </div>
             </div>
 
             <!-- Other Projects Section Title -->
@@ -164,7 +173,7 @@
                         The ability to stop time allows for strategic planning and fast execution.<br><br>
                         I developed this game solo for a course project, experimenting with time-based gameplay mechanics.
                     </p>
-    				<p>
+                    <p>
                         You can check out the game on <a href="https://bern-de-nijs.itch.io/waitasec" target="_blank">itch.io</a>.
                     </p>
                 </div>
