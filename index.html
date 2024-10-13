@@ -44,8 +44,9 @@
         .about-image {
             flex: 1; /* Allow the image to take up available space */
             max-height: 200px; /* Set a max height for the image */
-            object-fit: cover; /* Cover to maintain aspect ratio */
+            object-fit: contain; /* Use contain to avoid clipping */
             border-radius: 10px; /* Optional: rounded corners */
+            width: 100%; /* Make the width 100% of the flex container */
         }
 
         /* Projects Section Container */
