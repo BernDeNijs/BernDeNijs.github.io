@@ -33,6 +33,20 @@
             line-height: 1.6;
         }
 
+        /* About Section Flex Container */
+        .about-container {
+            display: flex;
+            align-items: center; /* Center content vertically */
+            gap: 20px; /* Space between text and image */
+        }
+
+        /* About Me Image */
+        .about-image {
+            flex: 0 0 200px; /* Fixed width for the image */
+            max-width: 100%; /* Responsive */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
         /* Projects Section Container */
         .projects-section {
             display: flex;
@@ -156,11 +170,17 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            Hi, I'm Bern De Nijs, a game development student at Digital Arts and Entertainment (DAE) in Belgium.<br> 
-            I'm passionate about creating engaging and innovative games, and I specialize in both design and programming.<br>
-            I am constantly working on improving my skills and exploring new game mechanics, tools, and creative ideas.<br>
-        </p>
+        <div class="about-container">
+            <p>
+                Hi, I'm <strong>Bern De Nijs</strong>, a game development student at Digital Arts and Entertainment (DAE) in Belgium.<br> 
+                My whole life I've been engrossed in the world of video games and I've spent the last few years eagerly learning how to make them myself.<br>
+                I have a few small projects under my belt now. <br>
+                Mostly small games made in a few days for some of our courses but also a few larger projects I've worked on with a team.<br>
+                Most of my time these days is spent working for school projects but in my spare time I still work on a personal project with a group of friends.<br>
+                I hope to release it in a year or two. <br>
+            </p>
+            <img src="/images/Mug.jpg" alt="Bern De Nijs" class="about-image">
+        </div>
     </section>
 
     <section id="projects">
@@ -244,3 +264,5 @@
     <footer>
         <p>&copy; 2024 Bern De Nijs</p>
     </footer>
+</body>
+</html>
