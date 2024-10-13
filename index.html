@@ -13,41 +13,56 @@
             background-color: #121212; /* Dark background */
             color: #e0e0e0; /* Light text color */
         }
+
         header {
             background-color: #1f1f1f; /* Darker header background */
             color: #e0e0e0; /* Light text for header */
             padding: 20px 0;
             text-align: center;
         }
+
         section {
             margin: 40px;
         }
+
         h1, h2, h3 {
             color: #90caf9; /* Light blue text for headers */
         }
+
         p {
             line-height: 1.6;
         }
+
+        /* Projects Section Container */
         .projects-section {
             display: flex;
             flex-direction: column;
-            gap: 20px; /* Space between the main project boxes */
+            gap: 20px; /* Space between project boxes */
         }
-        /* Project Title Box */
+
+        /* Project Title and Box Container */
         .project-container {
             background-color: #1f1f1f;
             padding: 20px;
             border-radius: 10px;
-        }
-        .project-title {
-            text-align: center;
-            margin-bottom: 20px;
+            position: relative;
         }
 
-        /* Box containing media and info */
+        /* Title Position (Top-Left) */
+        .project-title {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #90caf9;
+        }
+
+        /* Flexbox for Media and Info */
         .project-content-container {
             display: flex;
             gap: 20px;
+            margin-top: 40px; /* To ensure the title doesn't overlap the content */
         }
 
         .media-box, .info-box {
@@ -58,9 +73,9 @@
         }
 
         .media-box video, .media-box img {
-            width: 100%; /* Constrain video/image to box */
+            width: 100%;
             max-height: 250px; /* Set a maximum height */
-            object-fit: cover; /* Ensure it fits properly without stretching */
+            object-fit: cover; /* Ensure video/image fits nicely */
             border-radius: 10px;
         }
 
@@ -68,11 +83,11 @@
             margin-top: 0;
         }
 
-        /* For "Other Projects" */
+        /* "Other Projects" Grid */
         .other-projects-section {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Two columns for the smaller boxes */
-            gap: 20px; /* Space between boxes */
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         .other-project-box {
