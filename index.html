@@ -42,8 +42,9 @@
 
         /* About Me Image */
         .about-image {
-            flex: 0 0 200px; /* Fixed width for the image */
-            max-width: 100%; /* Responsive */
+            flex: 1; /* Allow the image to take up available space */
+            max-height: 200px; /* Set a max height for the image */
+            object-fit: cover; /* Cover to maintain aspect ratio */
             border-radius: 10px; /* Optional: rounded corners */
         }
 
